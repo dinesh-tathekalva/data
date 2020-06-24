@@ -1969,12 +1969,12 @@ var data = [{
               }] 
 
                 const ecom = () =>{
-                  let filtered = data.filter(i => i.categoryId =7).map(a => a.name)
-                  document.getElementById('app').innerHTML = filtered
+                  let filtered = data.filter(i => i.categoryId =7).filter(s =>s.subCategoryId=114).map(a => a.name)
+                  var text="";
+                  filtered.forEach(e=> (text+=e+"<br>"))
+                  document.getElementById("app").innerHTML = text;
                 }
 
-                
-              
                 // var arr = new Array()
                 // for(i=0; i<data.length;i++){
                 //   console.log(data[i].id)
